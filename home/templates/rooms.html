@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{%block title %}Rooms{%endblock%}
+{%block content%}
+{%load static%}
+
+  <!-- Rooms -->
+  <div class="container">
+    <h3 class="text-center mb-2">Apartment Rooms</h3>
+    <div class="row text-center">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">      
+            <img class="img-responsive" src="{%static '/images/room1.jpg'%}" alt="Chania" width="360" height="345">
+          </div>
+          <div class="col-lg-6">
+            <div class="text-center"><h4>Single Room</h4></div>
+              <ul>
+                <li><span>Max :</span>2 Persons</li>
+                <li><span>view :</span>Sea View</li>
+                <li><span>Bed:</span>1</li>        
+              </ul>
+                 <p><a href="rooms.html"><button class="button_room">Click to go</button></a></p>
+            </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">      
+            <img class="img-responsive" src="{%static '/images/room1.jpg'%}" alt="Chania" width="360" height="345">
+          </div>
+          <div class="col-lg-6">
+            <div class="text-center"><h4>Single Room</h4></div>
+              <ul>
+                <li><span>Max :</span>2 Persons</li>
+                <li><span>view :</span>Sea View</li>
+                <li><span>Bed:</span>1</li>        
+              </ul>
+                 <p><a href="rooms.html"><button class="button_room">Click to go</button></a></p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  {% endblock %}

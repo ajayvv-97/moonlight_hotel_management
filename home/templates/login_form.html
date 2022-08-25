@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{%block title %}Rooms{%endblock%}
+{%block content%}
+{%load static%}
+
+  <!-- Login  form -->
+  <section class="vh-100 bg-image" style="background-image: url({% static "images/image1.jpg" %})">
+  <div class="mask d-flex align-items-center h-75 gradient-custom-3">
+    <div class="container h-75">
+      <div class="row d-flex justify-content-center align-items-center h-75">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-4">Login</h2>
+
+              <form>
+
+                <div class="form-outline mb-3">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                </div>
+
+                <div class="form-outline mb-3">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+                  <a href="{%url 'sign'%}"><button type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Login</button></a>
+                </div>
+
+                <div class="d-flex justify-content-center mt-1">
+                  <a href="{%url 'home'%}"><button type="button"
+                    class="btn btn-primary btn-block btn-lg gradient-custom-4 text-body">Back To Home</button></a>
+                </div>
+
+               
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}
+
+  
+
+
+  <!-- login form -->
+  <div class="container-fluid" style="background-image: url({% static "images/image1.jpg" %})">
+      <div class="heading"><p>Login</p></div>
+      <div class="login_form">
+        <form onsubmit="form_validation()" id="login_form" action="index.html">                   
+          <div class="email_id"><input class="input_filed"  type="text" name="email" placeholder="Enter your Email id" ></div>
+          <div class="txt_pass"><input class="input_filed" type="text" name="password" placeholder="Enter Password" ></div>
+          <div class="login_btn"><a href="index.html"><button id="button_login">Login</button></a></div>
+        </form>        
+        <div class="home_btn"><a href="index.html"><button>Back to home</button></a></div>
+      </div> 
+
+</div>
+
+
+
+
+
+
+
