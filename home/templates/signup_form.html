@@ -18,7 +18,10 @@
                 <div class="col-lg-6">
 
                   <div class="form-outline mb-4">
-                    <input type="text" name="cuts_name" class="form-control form-control-md" />
+                    <!-- <input type="text" name="cuts_name" class="form-control form-control-md" />  -->{{form.username}}
+                    <!-- {% for err in form.cuts_name.errors %}
+                      <small class="text-danger ml-2">{{ err }}</small><br>
+                    {% endfor %} -->
                     <label class="form-label" for="form3Example1cg">First Name</label>
                   </div>
 
@@ -68,9 +71,9 @@
                   <div class="form-outline mb-4">
                     <select name="id_proof_type" class="form-select form-select-sm">
                       <option disabled selected>Open this select menu</option>
-                      <option value="1">Addhar card</option>
-                      <option value="2">Licence</option>
-                      <option value="3">Voter id</option>
+                      <option value="Addhar card">Addhar card</option>
+                      <option value="Licence">Licence</option>
+                      <option value="Voter id">Voter id</option>
                     </select>
                     <label class="form-label" for="form3Example1cg">ID proof Type</label>
                   </div>
