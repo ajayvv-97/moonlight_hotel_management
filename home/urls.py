@@ -1,6 +1,5 @@
 from django.urls import path,include
 from . import views
-# from .views import account_registartion
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -12,8 +11,7 @@ urlpatterns = [
     path('gallery',views.gallery,name='gallery'),
     path('rooms',views.rooms,name='rooms'),
     path('login',views.login,name='login'),
-    path('signup',views.sign,name='sign'),
-    # path('account_registartion',views.account_registartion,name='account_registartion'),
+    path('account_creation',views.account_creation,name='account_creation'),
     
 ]
 

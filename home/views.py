@@ -1,10 +1,35 @@
+# from django.forms import inlineformset_factory
+# from django.contrib.auth.forms import UserCreationForm
 from multiprocessing import context
-from django.shortcuts import render,redirect
-from django.http import HttpResponse
-from .models import*
-from django.core.files.storage import FileSystemStorage
-from .forms import  SignUpForm
-from django.views.generic import View
+from django.shortcuts import render, redirect 
+from .models import *
+from .forms import CustomerForm
+# from .filters import OrderFilter
+# from .decorators import unauthenticated_user, allowed_users, admin_only
+
+# @unauthenticated_user
+# def registerPage(request):
+
+# 	form = CreateUserForm()
+# 	if request.method == 'POST':
+# 		form = CreateUserForm(request.POST)
+# 		if form.is_valid():
+# 			user = form.save()
+# 			username = form.cleaned_data.get('cuts_name')
+
+
+# 			messages.success(request, 'Account was created for ' + username)
+
+# 			return redirect('login')
+		
+
+# 	context = {'form':form}
+# 	return render(request, 'signup_form.html', context)
+
+
+
+
+
 
 
 # Create your views here.
@@ -29,19 +54,15 @@ def rooms(request):
 def home(request):
     return render(request,'index.html')
 
-def sign(request):
-    return render(request,'signup_form.html')
-
-def signup(request):
-    form=SignUpForm(request.POST)
-    if form.is_valid:
-        pass
-    else:
-        form=SignUpForm()
+def account_creation(request):
+    form=CustomerForm
     context={
-        "form":form
+        'form':form
     }
-    return render(request,"singup_form.html",context)
+    return render(request,'creation.html',context)
+
+
+
 
 
 # def account_registartion(request):
